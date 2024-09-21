@@ -4,6 +4,7 @@ plugins {
     id("com.google.devtools.ksp")
     // Existing plugins
     alias(libs.plugins.compose.compiler)
+    id("com.google.gms.google-services")
 
 }
 
@@ -78,6 +79,7 @@ dependencies {
     implementation (libs.retrofit)
     implementation (libs.converter.gson)
     implementation (libs.firebase.auth)
+    implementation(platform(libs.firebase.bom))
 
 
 
