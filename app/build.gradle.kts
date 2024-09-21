@@ -77,6 +77,7 @@ dependencies {
     ksp(libs.androidx.room.compiler)
     implementation (libs.retrofit)
     implementation (libs.converter.gson)
+    implementation (libs.firebase.auth)
 
 
 
