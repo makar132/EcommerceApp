@@ -1,14 +1,18 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    id("com.google.devtools.ksp")
+    // Existing plugins
+    alias(libs.plugins.compose.compiler)
+
 }
 
 android {
-    namespace = "com.example.ecommerceapp"
+    namespace = "com.example.e_commertceapp"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.ecommerceapp"
+        applicationId = "com.example.e_commertceapp"
         minSdk = 26
         targetSdk = 34
         versionCode = 1
@@ -66,4 +70,15 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+    implementation (libs.androidx.lifecycle.viewmodel.ktx)
+    implementation (libs.androidx.lifecycle.livedata.ktx)
+    implementation (libs.androidx.room.runtime)
+    implementation (libs.androidx.room.ktx)
+    ksp(libs.androidx.room.compiler)
+    implementation (libs.retrofit)
+    implementation (libs.converter.gson)
+
+
+
+
 }
